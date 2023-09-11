@@ -1,0 +1,200 @@
+/* Stil för .board-klassen */
+.board {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* Stil för .root-klassen */
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Stil för .board-bar-klassen */
+.board-bar {
+    background: rgba(128, 128, 128, 0.5); /* Bakgrundsfärg i RGBA-format */
+    padding: 8px 15px;
+
+    /* Stil för .board-name inuti .board-bar */
+    .board-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+/* Stil för .board-wrapper-klassen */
+.board-wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+/* Stil för .board-columns-klassen */
+.board-columns {
+    display: flex;
+    flex-grow: 1;
+    height: 100vh;
+}
+
+/* Stil för .board-cols-klassen */
+.board-cols {
+    height: 100%;
+}
+
+/* Stil för .board-col-klassen */
+.board-col {
+    min-width: 350px;
+    min-height: 250px;
+    margin: 50px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+
+    &:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+/* Stil för .fa-icon-klassen */
+.fa-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Stil för .cat-name-klassen */
+.cat-name {
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+/* Stil för .board-column-klassen */
+.board-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 350px;
+    margin: 50px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.5);
+
+    &:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+/* Stil för .column-title-klassen */
+.column-title {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Stil för .tasks-container-klassen */
+.tasks-container {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Stil för .task-klassen */
+.task {
+    display: flex;
+    padding: 15px 12px;
+    background: white;
+    border-bottom: solid 1px #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 4;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05),
+                0 3px 14px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Stil för .cdk-drag-preview-klassen */
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Stil för .cdk-drag-placeholder-klassen */
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+/* Stil för .cdk-drag-animating-klassen */
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Stil för .tasks-container när den är i drag-and-drop-läge */
+.tasks-container.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Stil för .add-cat-style-klassen */
+.add-cat-style {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Stil för .plus-icon-klassen */
+.plus-icon {
+    font-size: 22px;
+}
+
+/* Media Query för skärmar med max bredd 1100px */
+@media (max-width: 1100px) {
+    .board-col {
+        min-width: 350px;
+        min-height: 250px;
+        margin: 20px !important;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 0;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Media Query för skärmar med max bredd 1040px */
+@media (max-width: 1040px) {
+    .board-col {
+        min-width: 90% !important;
+        margin: auto;
+        min-height: 250px;
+        margin: 50px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 0;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.5);
+
+        &:not(:first-child) {
+            margin-left: 0;
+        }
+    }
+}

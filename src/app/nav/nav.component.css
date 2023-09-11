@@ -1,0 +1,97 @@
+/* Stil för .navbar-brand */
+.navbar-brand {
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+/* Stil för .btn-nav */
+.btn-nav {
+    background: rgba(150, 232, 165, 0.7);
+    padding: 8px 15px;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* Ytterligare stil för .navbar-brand */
+.navbar-brand {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/* Stil för .fa-icon */
+fa-icon {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* Stil för .nav-header */
+.nav-header {
+    padding: 40px;
+    background-color: rgb(52, 58, 64);
+    color: white;
+    background: #212531;
+    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
+}
+
+/* Ytterligare stil för .nav-header h3 */
+.nav-header h3 {
+    font-weight: bold;
+    color: white;
+}
+
+/* Stil för .board-bar */
+.board-bar {
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+/* Stil för .board-bar när den är i hover-läge */
+.board-bar:hover {
+    color: green;
+    background-color: white;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateX(5px); /* Lägger till en horisontell översättning vid hover */
+}
+
+/* Stil för .board-bar när den är i focus-läge (när den är markerad) */
+.board-bar:focus {
+    color: green;
+    background-color: white;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Stil för .board-name */
+.board-name {
+    font-size: 19px;
+}
+
+/* Stil för :before-pseudo-elementet inuti .board-bar */
+.board-bar::before {
+    content: "";
+    width: 3px;
+    border-radius: 20px;
+    height: 16px;
+    position: absolute;
+    left: 2%;
+    top: 39%;
+    background-color: green;
+}
+
+/* Stil för .faTrash och .faPenToSquares */
+.faTrash, .faPenToSquares {
+    transition: 0.2s all ease-in-out;
+}
+
+/* Stil för .faTrash och .faPenToSquares när de är i hover-läge */
+.faTrash:hover, .faPenToSquares:hover {
+    font-size: 22px;
+}
